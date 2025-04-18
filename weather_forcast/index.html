@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="content-wrapper">
+            <h1>🌤 Travel Buddy</h1>
+            <p>Get accurate weather details for any location</p>
+            <div class="input-group">
+                <input type="text" id="cityName" placeholder="Enter city name" onkeypress="handleKeyPress(event)">
+                <button onclick="getWeather()">Search</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup Modal -->
+    <div class="modal" id="weatherModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Weather Details</h2>
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
