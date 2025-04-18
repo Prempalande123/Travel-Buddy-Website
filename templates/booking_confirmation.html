@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Booking Confirmation</title>
+</head>
+<body>
+    <h1>Booking Confirmation on Travel buddy</h1>
+    <p>Dear {{ user.username }},</p>
+    <p>Thank you for booking the event <strong>{{ event.name }}</strong>.</p>
+    <p>Here are the event details:</p>
+    <ul>
+        <li><strong>Date:</strong> {{ event.date }}</li>
+        <li><strong>Location:</strong> {{ event.location }}</li>
+    </ul>
+    <p>We look forward to seeing you at the event! Any queries Please contact us </p>
+</body>
+</html>

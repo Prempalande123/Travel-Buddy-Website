@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Unbooking Confirmation</title>
+</head>
+<body>
+    <div style="font-family: Arial, sans-serif; padding: 20px; background-color: #f9f9f9;">
+        <h2>Event Unbooking Confirmation</h2>
+        <p>Hello {{ user.first_name }},</p>
+        <p>You have successfully unbooked the event:</p>
+        <ul>
+            <li><strong>Event Name:</strong> {{ event.name }}</li>
+            <li><strong>Location:</strong> {{ event.location }}</li>
+            <li><strong>Date:</strong> {{ event.date }}</li>
+        </ul>
+        <p>We're sorry to see you go! If you have any questions, feel free to contact us.</p>
+        <p>Thank you,</p>
+        <p>The Events Team</p>
+    </div>
+</body>
+</html>
