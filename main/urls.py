@@ -19,5 +19,6 @@ urlpatterns = [
 
     # New Travel Buddy-related URLs
     path('create_travel_buddy/', create_travel_buddy, name='create_travel_buddy'),
-    path('search_travel_buddy/', search_travel_buddy, name='search_travel_buddy'),
+    path('search_travel_buddy/', search_users, name='search_travel_buddy'),  # Search users
+    path('profile/<int:user_id>/', user_profile_detail, name='user_profile_detail'),  # User profile detail
 ]

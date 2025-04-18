@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 import math
 import datetime
 
@@ -80,3 +82,18 @@ class TravelBuddy(models.Model):
 
     def __str__(self):
         return f"{self.user.username} - {self.location} to {self.destination}"
+
+# New UserProfile Model for Interests
+class UserProfile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
+    interests = models.TextField(blank=True)  # A comma-separated list of interests
+
+    def __str__(self):
+        return self.user.username
+
+# Signal to Create/Update UserProfile Automatically
+@receiver(post_save, sender=User)
+def create_or_update_user_profile(sender, instance, created, **kwargs):
+    if created:
+        UserProfile.objects.create(user=instance)
+    instance.profile.save()

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>TravelBuddy</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- font awesome cdn -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- fonts -->
+        <link rel = "stylesheet" href = "fonts.css">
+        <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+        <!-- normalize css -->
+        <link rel = "stylesheet" href = "normalize.css">
+        <!-- custom css -->
+        <link rel = "stylesheet" href = "utility.css">
+        <link rel = "stylesheet" href = "style.css">
+        <link rel = "stylesheet" href = "responsive.css">
+    </head>
+    <body>
+        <!-- navbar  -->
+        <nav class = "navbar">
+            <div class = "container flex">
+                <a href = "index.html" class = "site-brand">
+                    Travel<span>Buddy</span>
+                </a>
+
+                <button type = "button" id = "navbar-show-btn" class = "flex">
+                    <i class = "fas fa-bars"></i>
+                </button>
+                <div id = "navbar-collapse">
+                    <button type = "button" id = "navbar-close-btn" class = "flex">
+                        <i class = "fas fa-times"></i>
+                    </button>
+                    
+                </div>
+            </div>
+        </nav>
+        <!-- end of navbar  -->
+
+        <!-- header -->
+        <header class = "flex header-sm">
+            <div class = "container">
+                <div class = "header-title">
+                    <h1>Blog</h1>
+                    <p>Embark on unforgettable journeys with our travel blogs! Discover hidden gems, explore breathtaking destinations, and get insider tips to make your adventures seamless. Let’s turn your travel dreams into reality!</p>
+                </div>
+            </div>
+        </header>
+        <!-- header -->
+
+        <!-- blog section -->
+        <section id = "blog" class = "py-4">
+            <div class = "container">
+                <div class = "title-wrap">
+                    <h2 class = "sm-title">read these blog for information</h2>
+                    <h3 class = "lg-title">recent blog</h3>
+                </div>
+
+                <div class = "blog-row">
+                    <div class = "blog-item my-2 shadow">
+                        <div class = "blog-item-top">
+                            <img src = "blog-1.jpg" alt = "blog">
+                            <span class = "blog-date">Aug 28, 2024</span>
+                        </div>
+                        <div class = "blog-item-bottom">
+                            <span>travel | john doe
+                                <a href="https://www.incredibleindia.gov.in/en/people-and-culture" class="btn">EXPLORE</a>
+                            </span>
+                            <a href = "#">"Incredible India: A Journey Through Culture and Heritage"</a>
+                            <p class = "text">From the majestic Taj Mahal to the forts of Rajasthan, explore India's rich heritage and cultural diversity.</p>
+                        </div>
+                    </div>
+
+                    <div class = "blog-item my-2 shadow">
+                        <div class = "blog-item-top">
+                            <img src = "blog-2.jpg" alt = "blog">
+                            <span class = "blog-date">June 12, 2024</span>
+                        </div>
+                        <div class = "blog-item-bottom">
+                            <span>travel | Sarah Lee
+                                <a href="https://sundaysforever.com/blog/escape-the-heat-10-breathtaking-hill-stations-in-india-you-must-visit-this-summer" class="btn">EXPLORE</a>
+                            </span>
+                            <a href = "#">"Top 10 Breathtaking Hill Stations in India"</a>
+                            <p class = "text">Discover the beauty of India's hill stations, from the lush greenery of Munnar to the snowy peaks of Gulmarg.</p>
+                        </div>
+                    </div>
+
+                    <div class = "blog-item my-2 shadow">
+                        <div class = "blog-item-top">
+                            <img src = "blog-3.jpg" alt = "blog">
+                            <span class = "blog-date">Jan 23, 2023</span>
+                        </div>
+                        <div class = "blog-item-bottom">
+                            <span>travel | Alex Carter
+                                <a href="https://medium.com/altertrips/a-beginners-guide-to-solo-travelling-23a89ceee911" class="btn">EXPLORE</a>
+                            </span>
+                            <a href = "#">"Solo Travel: How to Explore the World Alone"</a>
+                            <p class = "text">Learn essential solo travel tips, safety precautions, and how to make the most of your independent adventures.</p>
+                        </div>
+                    </div>
+
+                    <div class = "blog-item my-2 shadow">
+                        <div class = "blog-item-top">
+                            <img src = "blog-4.jpg" alt = "blog">
+                            <span class = "blog-date">Nov 28, 2023</span>
+                        </div>
+                        <div class = "blog-item-bottom">
+                            <span>travel | Emily Johnson
+                                <a href="https://pureexploration.com/blogs/news/top-5-adventure-travel-destinations-for-your-next-trip" class="btn">EXPLORE</a>
+                            </span>
+                            <a href = "#">"Adventure Travel: 5 Thrilling Destinations to Visit"</a>
+                            <p class = "text">From hiking the Himalayas to diving in the Great Barrier Reef, here are the best adventure travel spots.</p>
+                        </div>
+                    </div>
+
+                    <div class = "blog-item my-2 shadow">
+                        <div class = "blog-item-top">
+                            <img src = "blog-5.jpg" alt = "blog">
+                            <span class = "blog-date">Sept 05, 2022</span>
+                        </div>
+                        <div class = "blog-item-bottom">
+                            <span>travel | Olivia Martinez
+                                <a href="https://uptoskills.com/travel-on-a-shoestring-tips-for-budget-friendly-adventures/" class="btn">EXPLORE</a>
+                            </span>
+                            <a href = "#">"Budget Travel Hacks: How to Explore on a Shoestring"</a>
+                            <p class = "text">Save money while traveling with these smart budget hacks, including cheap flights, accommodations, and more.</p>
+                        </div>
+                    </div>
+
+                    <div class = "blog-item my-2 shadow">
+                        <div class = "blog-item-top">
+                            <img src = "blog-6.jpg" alt = "blog">
+                            <span class = "blog-date">Feb 22, 2022</span>
+                        </div>
+                        <div class = "blog-item-bottom">
+                            <span>travel | Mark Stevenson
+                                <a href="https://www.ish.org.uk/hidden-gems-top-underrated-travel-destinations-for-2025/" class="btn">EXPLORE</a> 
+                            </span>
+                            <a href = "#">"Hidden Gems: Underrated Destinations Worth Visiting"</a>
+                            <p class = "text">Step off the beaten path and explore breathtaking destinations that most travelers overlook.</p>
+                        </div>
+                    </div>
+
+                    <div class = "blog-item my-2 shadow">
+                        <div class = "blog-item-top">
+                            <img src = "blog-7.jpg" alt = "blog">
+                            <span class = "blog-date">oct 20, 2021</span>
+                        </div>
+                        <div class = "blog-item-bottom">
+                            <span>travel | James Anderson
+                                <a href="https://www.travelisthecure.com/single-post/how-to-pack-like-a-pro" class="btn">EXPLORE</a>
+                            </span>
+                            <a href = "#">"How to Pack Like a Pro for Any Trip"</a>
+                            <p class = "text">Master the art of packing light and efficiently with this ultimate guide to stress-free travel packing.</p>
+                        </div>
+                    </div>
+                    <div class = "blog-item my-2 shadow">
+                        <div class = "blog-item-top">
+                            <img src = "blog-7.jpg" alt = "blog">
+                            <span class = "blog-date">oct 20, 2021</span>
+                        </div>
+                        <div class = "blog-item-bottom">
+                            <span>
+                                travel | tobi brown
+                                <a href="https://kanchansingh1989.wordpress.com/2024/03/01/embracing-the-colors-of-culture-a-journey-through-indian-festivals-in-books/" class="btn">EXPLORE</a>
+                            </span>
+                            <a href = "#">"Festivals of India: A Celebration of Colors and Culture"</a>
+                            <p class = "text">Experience the vibrancy of India’s festivals, from Holi and Diwali to Durga Puja and Pongal.</p>
+                        </div>
+                    </div>
+
+                    <div class = "blog-item my-2 shadow">
+                        <div class = "blog-item-top">
+                            <img src = "blog-8.jpg" alt = "blog">
+                            <span class = "blog-date">oct 03, 2021</span>
+                        </div>
+                        <div class = "blog-item-bottom">
+                            <span>travel | vik smith
+                                <a href="https://www.nomadicmatt.com/travel-blogs/india-travel-tips/" class="btn">EXPLORE</a>
+                            </span>
+                            <a href = "#">"A Budget Traveler’s Guide to Exploring India"</a>
+                            <p class = "text">Travel across India without breaking the bank! Learn how to save on transport, food, and accommodation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of blog section -->
+        
+
+        <!-- footer -->
+        <footer>
+            <div class="footerDetails">
+              <div class="footerDescription">
+                <h1 class="footerTitle">TravelBuddy</h1>
+                <p class="footerPara">
+                  Discover New Destinations. See breath-taking places and experience
+                  them from your device online.
+                  <br />
+                  Our travel writing captures the one thing we always strive to create
+                  – incredible travel experiences. From learning about the historical
+                  and political context of a destination to finding some really great
+                  hikes, each new place has something to discover.
+                  <br />
+                  We have a passion for storytelling, a knack for putting itineraries
+                  together and a strong desire to have fun. Here are all our
+                  adventures, our travel tips and our guides.
+                </p>
+              </div>
+      
+              <div class="footerContact">
+                <h1 class="contactTitle">Contact Me</h1>
+                <p class="contactPara">
+                  If you want to make any inquiries about the website, you can contact
+                  me through below options
+                </p>
+                <div class="contactOptions">
+                  <a
+                    href="https://github.com/chamindujs"
+                    target="_blank"
+                    class="contactOption"
+                  >
+                    <abbr title="GitHub">
+                      <img
+                        src="https://img.icons8.com/ios-glyphs/60/ca7717/github.png"
+                      />
+                    </abbr>
+                  </a>
+                  <a
+                    href="https://wa.link/1yweij"
+                    target="_blank"
+                    class="contactOption"
+                  >
+                    <abbr title="WhatsApp">
+                      <img
+                        src="https://img.icons8.com/material-outlined/48/ca7717/whatsapp--v1.png"
+                      />
+                    </abbr>
+                  </a>
+                  <div class="contactOption call">
+                    <abbr title="Call">
+                      <img src="https://img.icons8.com/ios/48/ca7717/phone.png" />
+                    </abbr>
+                  </div>
+                  <a
+                    href="mailto:chamindujs@gmail.com"
+                    target="_blank"
+                    class="contactOption"
+                  >
+                    <abbr title="Gmail">
+                      <img src="https://img.icons8.com/ios/50/ca7717/gmail-new.png" />
+                    </abbr>
+                  </a>
+                  <div href="" class="contactOption discord">
+                    <abbr title="Discord">
+                      <img
+                        src="https://img.icons8.com/ios/50/ca7717/discord-logo--v1.png"
+                      />
+                    </abbr>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="footerCopyright">
+              <p>
+                "© 2025 TravelBuddy . All rights reserved | Licensed under [Travel_Buddy]."
+              </p>
+            </div>
+          </footer>
+        <!-- end of footer -->
+        <!-- end of footer -->
+
+        <!-- js -->
+        <script src = "script.js"></script>
+        <script>
+            
+        </script>
+    </body>
+</html>

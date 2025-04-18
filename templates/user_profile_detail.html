@@ -1,0 +1,7 @@
+<!-- templates/user_profile_detail.html -->
+<h1>{{ user_profile.user.username }}'s Profile</h1>
+<p><strong>Bio:</strong> {{ user_profile.bio }}</p>
+<p><strong>Location:</strong> {{ user_profile.location }}</p>
+<p><strong>Interests:</strong> {{ user_profile.interests }}</p>
+<p><strong>Availability:</strong> {{ user_profile.availability }}</p>
+<a href="{% url 'search_users' %}">Back to Search</a>

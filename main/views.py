@@ -1,7 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
-from .models import event, Tag, TravelBuddy
+from .models import event, Tag, TravelBuddy, UserProfile
 from django.urls import reverse
 from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.utils import timezone
@@ -215,3 +215,22 @@ def search_travel_buddy(request):
         return render(request, 'search_travel_buddy.html', {'buddies': buddies})
 
     return render(request, 'search_travel_buddy.html')
+
+
+# ----------------- New Travel Buddy Search Views -----------------
+
+# Search Users by Name or Interests
+def search_users(request):
+    query = request.GET.get('q', '')  # Get the search query from the URL
+    users = UserProfile.objects.filter(
+        Q(user__username__icontains=query) |  # Match name
+        Q(interests__icontains=query)  # Match interests
+    ).distinct()
+
+    return render(request, 'search.html', {'users': users, 'query': query})
+
+
+# User Profile Detail View
+def user_profile_detail(request, user_id):
+    user_profile = get_object_or_404(UserProfile, user__id=user_id)
+    return render(request, 'user_profile_detail.html', {'user_profile': user_profile})

@@ -5,7 +5,7 @@ from django.http import JsonResponse
 from django.contrib.auth import login
 from django.views.decorators.csrf import csrf_exempt
 from .forms import SignUpForm
-from .models import profile
+from .models import Profile
 from main.models import event
 from django.core.mail import send_mail
 

@@ -1,0 +1,23 @@
+<!-- templates/search.html -->
+<h1>Search Users</h1>
+<form method="GET" action="{% url 'search_users' %}">
+    <input type="text" name="q" placeholder="Search by name or interests" required>
+    <button type="submit">Search</button>
+</form>
+
+{% if users %}
+    <h2>Search Results:</h2>
+    <ul>
+        {% for user in users %}
+            <li>
+                <a href="{% url 'user_profile_detail' user.id %}">
+                    {{ user.user.username }} - Interests: {{ user.interests }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    {% if query %}
+        <p>No results found for "{{ query }}".</p>
+    {% endif %}
+{% endif %}
