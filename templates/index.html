@@ -1,0 +1,117 @@
+{% extends "basic.html" %}
+{% load custom_filters %}
+{% load static %}
+{% block content %}
+
+<!-- ======= Hero Section with Full-Screen Carousel ======= -->
+<section id="heroCarousel" class="carousel slide" data-bs-ride="carousel" style="position: relative; width: 100%; height: 100vh;">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="carousel-overlay"></div>
+      <img src="{% static 'assets/img/img1.jpg' %}" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="Slide 1">
+    </div>
+    <div class="carousel-item">
+      <div class="carousel-overlay"></div>
+      <img src="{% static 'assets/img/img4.jpg' %}" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="Slide 2">
+    </div>
+    <div class="carousel-item">
+      <div class="carousel-overlay"></div>
+      <img src="{% static 'assets/img/img5.jpg' %}" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="Slide 3">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </a>
+  <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </a>
+
+  <!-- Hero Content Overlay -->
+  <div class="container d-flex flex-column align-items-center justify-content-center text-center text-white position-absolute top-50 start-50 translate-middle">
+    <h1 class="fw-bold">Book or Create <span style="color: #00ffcc;">Event</span></h1>
+    <h2>Travel and Meet buddies in the events you enjoy!</h2>
+    <div class="d-flex gap-3 mt-4">
+      <a href="{% url 'viewe_all_event' %}" class="btn btn-success px-4 py-2">
+        <i class="fa-regular fa-calendar-days me-2"></i>Find Events
+      </a>
+      <a href="https://travelbuddyexplorer.netlify.app/" class="btn btn-success px-4 py-2">
+        <i class="fa-solid fa-users me-2"></i>Explore Nearby
+      </a>
+      <a href="https://chat-app-ca.netlify.app/signup" class="btn btn-success px-4 py-2">
+        <i class="fa-solid fa-comments me-2"></i>Chat With Buddy
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+</style>
+
+<main id="main">
+  <section id="team" class="team">
+    <div class="container">
+      <div class="section-title" data-aos="fade-up">
+        <h2>Event</h2>
+        <p>Latest Events</p>
+      </div>
+      <div class="row" data-aos="fade-left">
+        {% for e in events %}
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{ e.name }}</h5>
+              <p class="card-text" style="font-size: 9pt; text-align: justify; min-height: 75px; max-height:75px; overflow-y: auto;">
+                {{ e.description }}
+              </p>
+              <p class="card-text " style="font-size: 9pt;">
+                <i class="fa-solid fa-location-dot text-danger" style="margin-right: 3px;"></i>{{ e.location }}
+              </p>
+              {% if request.user in e.participants.all %}
+                <a href="{% url 'book_unbook' e.pk %}" class="btn btn-sm btn-light def-bg-color w-100 text-white">
+                  <i class="fa fa-check-circle"></i> Booked
+                </a>
+              {% else %}
+                <a href="{% url 'prompt' e.pk %}" class="btn btn-sm btn-success def-bg-color w-100 text-white">
+                  <i class="fa-solid fa-clipboard-check"></i> Book Now
+                </a>
+              {% endif %}
+            </div>
+            <div class="card-footer bg-white" style="border-top: none;">
+              <span class="d-flex align-items-center justify-content-between">
+                <a href="{% url 'view_user_profile' e.orginzer.pk %}" style="text-decoration: none;">
+                  <div>
+                    <img src="{{ e.orginzer.profile.profilePic.url }}" style="width: 30px; height: 30px; border-radius:50%;">
+                    <span class="mx-2 text-muted" style="font-size:9pt;">{{ e.orginzer.first_name }} {{ e.orginzer.last_name }}</span>
+                  </div>
+                </a>
+                <div class="text-muted" style="font-size:9pt;">
+                  <span class="badge bg-light text-dark p-2">{{ e.date }}</span>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        <div class="col-12" style="margin-top: 15px; margin-bottom: 15px;">
+          <a href="{% url 'viewe_all_event' %}" class="btn btn-success def-bg-color">See All</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+  <i class="bi bi-arrow-up-short"></i>
+</a>
+<div id="preloader"></div>
+
+{% endblock content %}
