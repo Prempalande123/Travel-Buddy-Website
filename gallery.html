@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>TravelBuddy</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- font awesome cdn -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- fonts -->
+        <link rel = "stylesheet" href = "font/fonts.css">
+        <!-- normalize css -->
+        <link rel = "stylesheet" href = "css/normalize.css">
+        <!-- custom css -->
+        <link rel = "stylesheet" href = "css/utility.css">
+        <link rel = "stylesheet" href = "css/style.css">
+        <link rel = "stylesheet" href = "css/responsive.css">
+    </head>
+    <body>
+        <!-- navbar  -->
+        <nav class = "navbar">
+            <div class = "container flex">
+                <a href = "index.html" class = "site-brand">
+                    Travel<span>Buddy</span>
+                </a>
+
+                <button type = "button" id = "navbar-show-btn" class = "flex">
+                    <i class = "fas fa-bars"></i>
+                </button>
+                <div id = "navbar-collapse">
+                    <button type = "button" id = "navbar-close-btn" class = "flex">
+                        <i class = "fas fa-times"></i>
+                    </button>
+                   
+                </div>
+            </div>
+        </nav>
+        <!-- end of navbar  -->
+
+        <!-- header -->
+        <header class = "flex header-sm">
+            <div class = "container">
+                <div class = "header-title">
+                    <h1>Gallery</h1>
+                    <p>Discover breathtaking moments from around the world! Explore our curated collection of stunning landscapes, vibrant cultures, and unforgettable travel memories.</p>
+                </div>
+            </div>
+        </header>
+        <!-- header -->
+
+        <!-- gallery section -->
+        <div id = "gallery" class = "py-4">
+            <div class = "container">
+                <div class = "gallery-row">
+                    <div class = "gallery-item shadow">
+                        <img src = "images/gallery-1.jpg" alt = "gallery img">
+                        <span class = "zoom-icon">
+                            <i class = "fas fa-search-plus"></i>
+                        </span>
+                    </div>
+                    <div class = "gallery-item shadow">
+                        <img src = "images/gallery-2.jpg" alt = "gallery img">
+                        <span class = "zoom-icon">
+                            <i class = "fas fa-search-plus"></i>
+                        </span>
+                    </div>
+                    <div class = "gallery-item shadow">
+                        <img src = "images/gallery-3.jpg" alt = "gallery img">
+                        <span class = "zoom-icon">
+                            <i class = "fas fa-search-plus"></i>
+                        </span>
+                    </div>
+                    <div class = "gallery-item shadow">
+                        <img src = "images/gallery-4.jpg" alt = "gallery img">
+                        <span class = "zoom-icon">
+                            <i class = "fas fa-search-plus"></i>
+                        </span>
+                    </div>
+                    <div class = "gallery-item shadow">
+                        <img src = "images/gallery-5.jpg" alt = "gallery img">
+                        <span class = "zoom-icon">
+                            <i class = "fas fa-search-plus"></i>
+                        </span>
+                    </div>
+                    <div class = "gallery-item shadow">
+                        <img src = "images/gallery-6.jpg" alt = "gallery img">
+                        <span class = "zoom-icon">
+                            <i class = "fas fa-search-plus"></i>
+                        </span>
+                    </div>
+                    <div class = "gallery-item shadow">
+                        <img src = "images/gallery-7.jpg" alt = "gallery img">
+                        <span class = "zoom-icon">
+                            <i class = "fas fa-search-plus"></i>
+                        </span>
+                    </div>
+                    <div class = "gallery-item shadow">
+                        <img src = "images/gallery-8.jpg" alt = "gallery img">
+                        <span class = "zoom-icon">
+                            <i class = "fas fa-search-plus"></i>
+                        </span>
+                    </div>
+                    <div class = "gallery-item shadow">
+                        <img src = "images/gallery-9.jpg" alt = "gallery img">
+                        <span class = "zoom-icon">
+                            <i class = "fas fa-search-plus"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of gallery section -->
+
+        <!-- img modal -->
+        <div id = "img-modal-box">
+            <div id = "img-modal">
+                <button type = "button" id = "modal-close-btn" class = "flex">
+                    <i class = "fas fa-times"></i>
+                </button>
+                <button type = "button" id = "prev-btn" class = "flex">
+                    <i class = "fas fa-chevron-left"></i>
+                </button>
+                <button type = "button" id = "next-btn" class = "flex">
+                    <i class = "fas fa-chevron-right"></i>
+                </button>
+                <img src = "images/gallery-1.jpg">
+            </div>
+        </div>
+        <!-- end of img modal -->
+
+        <!-- popular places section -->
+        <section id="popular" class="py-4">
+            <div class="title-wrap">
+                <span class="sm-title">Discover India's most iconic destinations</span>
+                <h2 class="lg-title">Popular Places in India</h2>
+            </div>
+        
+            <div class="popular-row">
+                <div class="popular-item shadow">
+                    <img src="images/Tajj.jpg" alt="Taj Mahal">
+                    <div>
+                        <span>Taj Mahal, Agra</span>
+                        <ul class="rating flex">
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star-half-alt"></i></li>
+                            <li>&nbsp;500 reviews</li>
+                        </ul>
+                        <p class="text">A symbol of love and one of the Seven Wonders of the World, the Taj Mahal is a must-visit destination.</p>
+                    </div>
+                </div>
+        
+                <div class="popular-item shadow">
+                    <img src="images/cityy.jpg" alt="City Palace Jaipur">
+                    <div>
+                        <span>City Palace, Jaipur</span>
+                        <ul class="rating flex">
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star-half-alt"></i></li>
+                            <li>&nbsp;420 reviews</li>
+                        </ul>
+                        <p class="text">A royal palace showcasing Rajput and Mughal architecture, located in the heart of Jaipur.</p>
+                    </div>
+                </div>
+        
+                <div class="popular-item shadow">
+                    <img src="images/varan.jpg" alt="Varanasi Ghats">
+                    <div>
+                        <span>Ghats of Varanasi, Uttar Pradesh</span>
+                        <ul class="rating flex">
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star-half-alt"></i></li>
+                            <li>&nbsp;380 reviews</li>
+                        </ul>
+                        <p class="text">Experience the spiritual essence of India along the holy Ganges river in Varanasi.</p>
+                    </div>
+                </div>
+        
+                <div class="popular-item shadow">
+                    <img src="images/kerala.jpg" alt="Kerala Backwaters">
+                    <div>
+                        <span>Kerala Backwaters</span>
+                        <ul class="rating flex">
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star-half-alt"></i></li>
+                            <li>&nbsp;350 reviews</li>
+                        </ul>
+                        <p class="text">Enjoy a serene houseboat cruise through the scenic backwaters of Kerala.</p>
+                    </div>
+                </div>
+        
+                <div class="popular-item shadow">
+                    <img src="images/mumbai.jpg" alt="Gateway of India">
+                    <div>
+                        <span>Gateway of India, Mumbai</span>
+                        <ul class="rating flex">
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star-half-alt"></i></li>
+                            <li>&nbsp;410 reviews</li>
+                        </ul>
+                        <p class="text">A historic landmark in Mumbai,</p>
+                        <p class="text">overlooking the Arabian Sea.</p>
+
+                    </div>
+                </div>
+        
+                <div class="popular-item shadow">
+                    <img src="images/hampi.jpg" alt="Hampi">
+                    <div>
+                        <span>Hampi, Karnataka</span>
+                        <ul class="rating flex">
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star-half-alt"></i></li>
+                            <li>&nbsp;370 reviews</li>
+                        </ul>
+                        <p class="text">Explore the ancient ruins of the </p>
+                        <p class="text">Vijayanagara Empire, a UNESCO World Heritage Site.</p>
+                    </div>
+                </div>
+        
+                <div class="popular-item shadow">
+                    <img src="images/meenakshi.jpg" alt="Meenakshi Temple">
+                    <div>
+                        <span>Meenakshi Temple, Madurai</span>
+                        <ul class="rating flex">
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star-half-alt"></i></li>
+                            <li>&nbsp;360 reviews</li>
+                        </ul>
+                        <p class="text">A magnificent Dravidian-style temple dedicated to Goddess Meenakshi and Lord Shiva.</p>
+                    </div>
+                </div>
+        
+                <div class="popular-item shadow">
+                    <img src="images/golden.jpg" alt="Golden Temple">
+                    <div>
+                        <span>Golden Temple, Amritsar</span>
+                        <ul class="rating flex">
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star-half-alt"></i></li>
+                            <li>&nbsp;500 reviews</li>
+                        </ul>
+                        <p class="text">A spiritual and architectural marvel, the Golden Temple is a major Sikh pilgrimage site.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- end of popular places section -->
+        
+
+        <!-- footer -->
+        <footer>
+            <div class="footerDetails">
+              <div class="footerDescription">
+                <h1 class="footerTitle">TravelBuddy</h1>
+                <p class="footerPara">
+                  Discover New Destinations. See breath-taking places and experience
+                  them from your device online.
+                  <br />
+                  Our travel writing captures the one thing we always strive to create
+                  – incredible travel experiences. From learning about the historical
+                  and political context of a destination to finding some really great
+                  hikes, each new place has something to discover.
+                  <br />
+                  We have a passion for storytelling, a knack for putting itineraries
+                  together and a strong desire to have fun. Here are all our
+                  adventures, our travel tips and our guides.
+                </p>
+              </div>
+      
+              <div class="footerContact">
+                <h1 class="contactTitle">Contact Me</h1>
+                <p class="contactPara">
+                  If you want to make any inquiries about the website, you can contact
+                  me through below options
+                </p>
+                <div class="contactOptions">
+                  <a
+                    href="https://github.com/chamindujs"
+                    target="_blank"
+                    class="contactOption"
+                  >
+                    <abbr title="GitHub">
+                      <img
+                        src="https://img.icons8.com/ios-glyphs/60/ca7717/github.png"
+                      />
+                    </abbr>
+                  </a>
+                  <a
+                    href="https://wa.link/1yweij"
+                    target="_blank"
+                    class="contactOption"
+                  >
+                    <abbr title="WhatsApp">
+                      <img
+                        src="https://img.icons8.com/material-outlined/48/ca7717/whatsapp--v1.png"
+                      />
+                    </abbr>
+                  </a>
+                  <div class="contactOption call">
+                    <abbr title="Call">
+                      <img src="https://img.icons8.com/ios/48/ca7717/phone.png" />
+                    </abbr>
+                  </div>
+                  <a
+                    href="mailto:chamindujs@gmail.com"
+                    target="_blank"
+                    class="contactOption"
+                  >
+                    <abbr title="Gmail">
+                      <img src="https://img.icons8.com/ios/50/ca7717/gmail-new.png" />
+                    </abbr>
+                  </a>
+                  <div href="" class="contactOption discord">
+                    <abbr title="Discord">
+                      <img
+                        src="https://img.icons8.com/ios/50/ca7717/discord-logo--v1.png"
+                      />
+                    </abbr>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="footerCopyright">
+              <p>
+                "© 2025 TravelBuddy . All rights reserved | Licensed under [Travel_Buddy]."
+              </p>
+            </div>
+          </footer>
+        <!-- end of footer -->
+
+        <!-- js -->
+        <script src = "js/script.js"></script>
+        <script>
+            // image modal
+            const allGalleryItem = document.querySelectorAll('.gallery-item');
+            const imgModalDiv = document.getElementById('img-modal-box');
+            const modalCloseBtn = document.getElementById('modal-close-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const prevBtn = document.getElementById('prev-btn');
+            let imgIndex = 0;
+
+            allGalleryItem.forEach((galleryItem) => {
+                galleryItem.addEventListener('click', () => {
+                    imgModalDiv.style.display = "block";
+                    let imgSrc = galleryItem.querySelector('img').src;
+                    imgIndex = parseInt(imgSrc.split("-")[1].substring(0, 1));
+                    showImageContent(imgIndex);
+                })
+            });
+
+            // next click
+            nextBtn.addEventListener('click', () => {
+                imgIndex++;
+                if(imgIndex > allGalleryItem.length){
+                    imgIndex = 1;
+                }
+                showImageContent(imgIndex);
+            });
+
+            // previous click
+            prevBtn.addEventListener('click', () => {
+                imgIndex--;
+                if(imgIndex <= 0){
+                    imgIndex = allGalleryItem.length;
+                }
+                showImageContent(imgIndex);
+            });
+
+            function showImageContent(index){
+                imgModalDiv.querySelector('#img-modal img').src = `images/gallery-${index}.jpg`;
+            }
+
+            modalCloseBtn.addEventListener('click', () => {
+                imgModalDiv.style.display = "none";
+            })
+        </script>
+    </body>
+</html>
